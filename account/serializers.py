@@ -54,3 +54,9 @@ class LoginSerializer(serializers.Serializer):
             raise serializers.ValidationError('Email и пароль обязательный')
         attrs['user'] = user
         return attrs
+
+
+
+
+
+

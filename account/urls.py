@@ -3,8 +3,7 @@ from account.views import (RegistrationView,
                            ActivationView,
                            LoginView,
                            LogoutView,
-                           ResetPasswordView,
-                           ChangePasswordView
+
                            )
 urlpatterns = [
     path('register/', RegistrationView.as_view()),

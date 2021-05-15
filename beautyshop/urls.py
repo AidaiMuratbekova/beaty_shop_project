@@ -26,12 +26,11 @@ router.register('product', ProductViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api-auth/', include('rest_framework.urls')),
+    # path('api-auth/', include('rest_framework.urls')),
     path('', api_root),
-    path('v1/api/categories', CategoriesListView.as_view(), name='categories-list'),
-    # path('v1/api/add-image/', ProductImageView.as_view()),
-    path('v1/api/account/', include('account.urls')),
-    path('v1/api/review/', ReviewCreateView.as_view()),
-    path('v1/api/', include(router.urls)),
+    path('api/v1/categories', CategoriesListView.as_view(), name='categories-list'),
+    path('api/v1/', include('account.urls')),
+    path('api/v1/review/', ReviewCreateView.as_view()),
+    path('api/v1/', include(router.urls)),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

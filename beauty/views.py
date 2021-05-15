@@ -29,7 +29,7 @@ class ProductViewSet(ModelViewSet):
                        filters.SearchFilter,
                        filters.OrderingFilter]
     filterset_fields = ['author', 'title']
-    search_fields = ['title', 'created_at', 'created_at']
+    search_fields = ['title', 'created_at']
     ordering_fields = ['created_at', 'title']
 
     def get_serializer_class(self):
